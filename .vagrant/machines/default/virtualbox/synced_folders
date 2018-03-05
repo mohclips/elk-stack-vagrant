@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant_syslogs":{"guestpath":"/vagrant_syslogs","hostpath":"/var/log","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/nick/workspaces/elk-vagrant","disabled":false,"__vagrantfile":true}}}
