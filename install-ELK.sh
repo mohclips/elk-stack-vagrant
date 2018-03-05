@@ -69,8 +69,10 @@ cp -v /vagrant/logstash-collectd.conf /etc/logstash/conf.d/
 cp -v /vagrant/collectd.conf /etc/collectd/
 
 # install plugins
-header "install plugins"
-/usr/share/elasticsearch/bin/elasticsearch-plugin install --quiet x-pack
+header "install plugins - this is very slow"
+echo " ++ x-pack for elastic search"
+/usr/share/elasticsearch/bin/elasticsearch-plugin install --silent x-pack
+echo " ++ x-pack for kibana"
 /usr/share/kibana/bin/kibana-plugin install --quiet x-pack
 
 # start services
@@ -86,6 +88,6 @@ header "enable and start services"
 /bin/systemctl restart collectd.service
 
 # test access
-header "tes access"
-wget -O - http://127.0.0.1/
+header "test access"
+wget -O - http://127.0.0.1:9200/
 
